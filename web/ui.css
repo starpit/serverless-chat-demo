@@ -1,0 +1,75 @@
+/*
+ * Copyright 2017 IBM Corporation
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #263238;
+    color: white;
+    font-size: 1.5em;
+}
+.label {
+    margin: 2em 0;
+    font-size: 2.5em;
+}
+input:focus {
+    outline: none;
+}
+input {
+    background: #B0BEC5;
+    border: none;
+    padding: 1em;
+    font-size: 1.5em;
+    width: 100%;
+}
+button:hover {
+    cursor: pointer;
+    background: hsla(35, 98%, 66%, 1);
+}
+button {
+    transition: all 150ms ease-in-out;
+    font-size: 1.5em;
+    margin: 1em 0;
+    padding: 1ex 1em;
+    background: #FECB85;
+    border-color: rgba(255,255,255,0.5);
+}
+#response {
+    font-size: 1.5em;
+    padding: 1em 0;
+    color: #F85033;
+    height: 1.5em;
+    min-width: 30em;
+}
+#response.spin {
+    animation: alert-pulse 750ms linear infinite;
+    animation-direction: alternate
+}
+#response.spin:after {
+    content: '|'
+}
+
+@keyframes alert-pulse {
+  0% {
+      color: inherit;
+  }
+  100% {
+      transform: scale(1.05) translateX(15px);
+  }
+}
